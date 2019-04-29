@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	Argument type
+	</title>
+</head>
+<body>
+<script type="text/javascript">
+function typeArgument(value){
+
+	var type=[Function, RegExp, Number, String, Boolean, Object], x, len;
+	if(typeof value== "Object" || typeof value== "function")
+	{
+		for (x = 0, len = type.length; x < len; x++) 
+     {
+            if (value instanceof type[x])
+            {
+                return type[x];
+            }
+	 }
+    }
+	return typeof value;
+}	
+alert("first type:"+typeArgument(true));
+alert(typeArgument(13));
+alert(typeArgument('huawei'));
+alert(typeArgument(/school/i));
+
+
+
+</script>
+
+</body>
+</html>
